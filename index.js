@@ -11,14 +11,10 @@ tweetBtn.addEventListener("click", function () {
 document.addEventListener("click", function(event) {
   if (event.target.dataset.like) {
     handleLikeClick(event.target.dataset.like);
-  }
-});
-
-document.addEventListener("click", function(event) {
-  if (event.target.dataset.retweet) {
+  } else if (event.target.dataset.retweet) {
     handleRetweetClick(event.target.dataset.retweet);
   }
-}); 
+});
 
 function handleLikeClick(tweetId) {
   const targetTweetObj = tweetsData.filter(function (tweet) {
